@@ -1,0 +1,78 @@
+/* ==========================================================
+   style.css — Palette bleu nuit / vert émeraude
+   Écoconception : police système (aucun chargement externe),
+   pas d'images ni de dégradés lourds, CSS minimal, peu de requêtes.
+   ========================================================== */
+
+:root {
+  --bleu-nuit: #0B1F3A;   /* fond principal */
+  --bleu-nuit-clair: #16305A; /* cartes / sections */
+  --emeraude: #2FBF71;    /* accent, boutons, liens */
+  --emeraude-fonce: #21A65E;
+  --texte-clair: #F2F4F3;
+  --texte-attenue: #B9C2CC;
+
+  /* Police système : aucune requête réseau, chargement instantané */
+  --police: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bleu-nuit);
+  color: var(--texte-clair);
+  font-family: var(--police);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--texte-clair);
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+a { color: var(--emeraude); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header / navigation */
+header {
+  background: var(--bleu-nuit-clair);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  margin-left: 20px;
+  color: var(--texte-clair);
+}
+nav a:hover { color: var(--emeraude); }
+
+/* Sections générales */
+main, section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* Cartes (compétences, projets, etc.) */
+.carte, article {
+  background: var(--bleu-nuit-clair);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* Boutons */
+button, .btn {
+  background: var(--emeraude);
+  color: var(--bleu-nuit);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover, .btn:hover {
+  background: var(--emeraude-fonce);
+}
